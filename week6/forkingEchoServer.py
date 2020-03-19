@@ -6,8 +6,7 @@ import sys
 # Create a socket, bind it to localhost:4242, and start listening.
 # Runs once in the parent; all forked children inherit the socket's
 # file descriptor.
-sock = socket.socket(socket.AF_INET, # Internet
-                             socket.SOCK_STREAM) # TCP
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IP, TCP
 sock.bind(("localhost", 4242))
 sock.listen(10)
 
@@ -45,8 +44,6 @@ try:
 
             except KeyboardInterrupt:
                 sys.exit()
-
-
 
 
     # Trap (Ctrl-C) interrupts, write a note, and exit immediately
